@@ -1,0 +1,15 @@
+{
+  "name": "denis-chmel/eloquent-model-query",
+  "license": "MIT",
+  "require": {
+    "php": "^7.4|^8.0",
+    "illuminate/database": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "EloquentModelQuery\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
