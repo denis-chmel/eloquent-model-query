@@ -22,7 +22,7 @@ abstract class AbstractQuery extends EloquentBuilder
      */
     public function whereAll(\Closure $closure, string $boolean = 'AND'): self
     {
-        return $this->where($closure, $boolean);
+        return $this->where($closure, null, null, $boolean);
     }
 
     /**
