@@ -8,11 +8,21 @@ https://timacdonald.me/dedicated-eloquent-model-query-builders/
 The problem it solves - bypasses the lack of auto-completion in Eloquent builder/query. While the suggested solution allows to declare dedicated query class, one per each model class.
 
 ## Installation
+Add into composer.json
+```
+    "repositories": {
+        "eloquent-query-filter": {
+            "type": "vcs",
+            "url": "git@github.com:denis-chmel/eloquent-model-query.git"
+        }
+    }
+```
+And then run:
 ```
 composer require denis-chmel/eloquent-model-query:@dev
 ```
 
-Then use HasModelQuerySupport trait and override the query() method in your Model:
+After that use HasModelQuerySupport trait and override the query() method in your Model:
 ```
 <?php
 
