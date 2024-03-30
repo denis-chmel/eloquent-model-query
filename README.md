@@ -8,8 +8,9 @@ https://timacdonald.me/dedicated-eloquent-model-query-builders/
 The problem it solves - bypasses the lack of auto-completion in Eloquent builder/query. While the suggested solution allows to declare dedicated query class, one per each model class.
 
 ## Installation
-
+```
 composer require denis-chmel/eloquent-model-query:@dev
+```
 
 Then use HasModelQuerySupport trait and override the query() method in your Model:
 ```
@@ -70,7 +71,7 @@ $emails = User::query()->name('Denis')->emailEndsWith('@gmail.com')->pluck('emai
 ```
 In other words - use same Eloquent query approach, but with autocomplete. The benefit - the autocompletion and refactor/rename/go to definition/find all usages works as they should in all strict-typed languages, no magic, no phpdoc workarounds.
 
-Lastly, there is one more sugar with eloquent-model-query, you may reuse your method and *typehint* your custom queries in sub-queries, like see the next exaple that is a query of a Order model, that subqueries order users using UserQuery:
+Lastly, there is one more sugar with eloquent-model-query, you may reuse your method and *typehint* your custom queries in sub-queries, like see the next example that is a query of a Order model, that subqueries order users using UserQuery:
 
 ```
 class OrderQuery extends \EloquentCustomQuery\AbstractQuery {
